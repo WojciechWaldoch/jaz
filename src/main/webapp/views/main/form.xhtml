@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:h="http://java.sun.com/jsf/html">
+    <h:form id="form">
+        <h:panelGrid columns="3">
+
+            <h:outputText value="#{msg.name}" />
+            <h:inputText id="name" value="#{bookJsf.book.name}" size="70">
+                <f:validateRequired />
+            </h:inputText>
+            <h:messages for="name" style="color:red" />
+            
+            <h:outputText value="#{msg.siteNumber}" />
+            <h:inputText id="speed" value="#{bookJsf.book.siteNumber}" size="8" >
+                <f:validateRequired />
+            </h:inputText>
+            <h:messages for="speed" style="color:red" />
+            
+            <h:outputText value="#{msg.weight}" />
+            <h:inputText id="weight" value="#{bookJsf.book.weight}" size="8" >
+                <f:validateRequired />
+            </h:inputText>
+            <h:messages for="weight" style="color:red" />
+            
+            <h:outputText value="#{msg.isbn}" />
+            <h:inputText id="isbn" value="#{bookJsf.book.isbn}" size="20" >
+                <f:validateRequired />
+            </h:inputText>
+            <h:messages for="isbn" style="color:red" />
+        </h:panelGrid>
+        <p>
+            <h:commandButton value="#{msg.merge}" action="#{bookJsf.merge}" />
+        </p>
+    </h:form>
+</ui:composition>
